@@ -1,0 +1,54 @@
+<div class="container-fluid pt-4 px-4">
+  <div class="row g-4" style="justify-content: center">
+    <div class="col-sm-12 col-xl-6">
+      <div class="bg-light rounded h-100 p-4">
+        <form #courseForm="ngForm" (ngSubmit)="addCourse(courseForm);courseForm.resetForm(); " >
+          <h6 class="mb-4">Floating Label</h6>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control"  placeholder="Title"
+            #title="ngModel" [(ngModel)]="Courseservice.selectedCourse.title" name="title"
+            />
+            <label for="floatingInput">Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control"  placeholder="Price"
+            #price="ngModel" [(ngModel)]="Courseservice.selectedCourse.price" name="price"
+            />
+            <label for="floatingInput">Price</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control"  placeholder="Teacher"
+            #teacher="ngModel" [(ngModel)]="Courseservice.selectedCourse.teacher" name="teacher"
+            />
+            <label for="floatingInput">Teacher</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control"  placeholder="Speciality"
+            #speciality="ngModel" [(ngModel)]="Courseservice.selectedCourse.speciality" name="speciality"
+            />
+            <label for="floatingInput">Speciality</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control"  placeholder="image"
+            #image="ngModel" [(ngModel)]="Courseservice.selectedCourse.image" name="image"
+            />
+            <label for="floatingInput">image</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control"  placeholder="Description"
+            #Description="ngModel" [(ngModel)]="Courseservice.selectedCourse.Description" name="Description"
+            />
+            <label for="floatingInput">Description</label>
+          </div>
+          <button type="submit" class="btn btn-primary e-success" data-toggle="button" aria-pressed="false" autocomplete="off"  >
+            Submit
+          </button>
+          <button type="button" class="btn right btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" style="margin-left:20px;" (click)="courseForm.reset()">
+            Clear
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
